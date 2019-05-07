@@ -1,0 +1,148 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+	template="/templateSuperAdmin.xhtml"
+	
+	
+	
+                xmlns:p="http://primefaces.org/ui">
+	<ui:define name="pageCSS">
+		
+		<h:outputStylesheet library="css" name="bootstrap.min.css" />
+		<h:outputStylesheet library="font-awesome" name="css/font-awesome.css" />
+		<h:outputStylesheet library="css" name="plugins/iCheck/custom.css" />
+		<h:outputStylesheet library="css"
+			name="plugins/steps/jquery.steps.css" />
+		<h:outputStylesheet library="css" name="animate.css" />
+		<h:outputStylesheet library="css" name="style.css" />
+<h:outputStylesheet library="css" name="test.css" />
+	</ui:define>
+	<ui:define name="titleHere">
+	<div id="aaa" class="aaa" style=" background-image:url(#{request.contextPath}/resources/img/back.jpg);
+	">	<br/>	<br/>
+	
+	 <center>  <h1 style="text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+               color:#b72c2c;
+               font-weight: 900;">List of Admins</h1></center><br/>	<br/>
+	<h:form>
+    <p:dataTable id="tbl" var="emp" value="#{superadminBean.affadmin()}"
+                  rows="2" paginator="true" rowsPerPageTemplate="2,5,10"
+                paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"  style="margin-bottom:20px">
+ 
+        
+ 
+        <p:column>
+            <f:facet name="header">
+                <h:outputText value="Last name" />
+            </f:facet>
+            <h:outputText value="#{emp.nomEmploye}" />
+        </p:column>
+ 
+        <p:column>
+            <f:facet name="header">
+                <h:outputText value="First name"/>
+            </f:facet>
+            <h:outputText value="#{emp.prenomEmploye}" />
+        </p:column>
+ 
+        <p:column>
+            <f:facet name="header">
+                <h:outputText value="Username" />
+            </f:facet>
+            <h:outputText value="#{emp.userNameEmploye}" />
+        </p:column>
+ 
+        <p:column>
+            <f:facet name="header">
+                <h:outputText value="Email" />
+            </f:facet>
+            <h:outputText value="#{emp.emailEmploye}" />
+        </p:column>
+         <p:column>
+            <f:facet name="header">
+                <h:outputText value="School" />
+            </f:facet>
+            <h:outputText value="#{emp.ecoleEmploye}" />
+        </p:column>
+        <p:column exportable="false" >
+            
+              <h:commandButton id="example_b" styleClass="example_b" action="#{superadminBean.modifier(emp)}" value="Edit" />
+  
+  <p:growl id="message" showDetail="true" />
+     
+    <p:commandButton value="Delete" id="example_ba" styleClass="example_ba" action="#{superadminBean.supprimer(emp.idEmploye,emp.ecoleEmploye)}" update="message" style="color: #fff !important;
+text-transform: uppercase;
+background: #265da0;
+padding: 20px;
+width:120px;
+border-radius: 50px;
+display: inline-block;
+border: none;
+ ">
+        <p:confirm header="Confirmation" message="Are you sure?"  />
+    </p:commandButton>
+     
+    <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+        <p:commandButton value="Yes" type="button" styleClass="ui-confirmdialog-yes"  />
+        <p:commandButton value="No" type="button" styleClass="ui-confirmdialog-no"  />
+    </p:confirmDialog>      
+        </p:column>
+    </p:dataTable>
+   <center>  <h2 style="text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+               color:#b72c2c;
+               font-weight: 500;">Export Data</h2>
+    
+ 
+    <h:commandLink>
+     <h:graphicImage value="resources/img/pdf.png" />
+        
+        <p:dataExporter type="pdf" target="tbl" fileName="Admins"  />
+    </h:commandLink>
+ <h:commandLink>
+    
+        <h:graphicImage value="resources/img/xml.png" />
+        <p:dataExporter type="xml" target="tbl" fileName="Admins"  />
+    </h:commandLink>
+    <h:commandLink>
+     <h:graphicImage value="resources/img/csv.png" />
+        <p:dataExporter type="csv" target="tbl" fileName="Admins" />
+    </h:commandLink>
+ 
+    
+ </center>
+ <br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+	
+   
+</h:form>
+			</div>
+				
+	 </ui:define>
+</ui:composition>

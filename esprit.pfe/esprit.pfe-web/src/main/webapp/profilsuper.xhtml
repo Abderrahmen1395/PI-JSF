@@ -1,0 +1,130 @@
+<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      template="/templateSuperAdmin.xhtml"
+      >
+      <ui:define name="pageCSS">
+		
+		<h:outputStylesheet library="css" name="bootstrap.min.css" />
+		<h:outputStylesheet library="font-awesome" name="css/font-awesome.css" />
+		<h:outputStylesheet library="css" name="plugins/iCheck/custom.css" />
+		<h:outputStylesheet library="css"
+			name="plugins/steps/jquery.steps.css" />
+		<h:outputStylesheet library="css" name="animate.css" />
+		<h:outputStylesheet library="css" name="style.css" />
+		<h:outputStylesheet library="css" name="style2.css" />
+
+	</ui:define>
+	<ui:define name="titleHere">
+	
+	<br/>
+	<br/>
+	<br/>
+	<br/> 
+	   
+
+<div class="signupSection">
+  <div class="info">
+  <br/>
+	<br/>
+	<br/>
+	<br/> 
+	<br/>
+	<br/>
+	<br/>
+	<br/> 
+    <h2   class="font-bold" style="text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+               
+               font-weight: 900;">Edit your profil</h2>
+    <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>
+    <br/>
+	<br/>
+	<br/>
+	<br/> 
+    <img alt="image" 
+        src="resources/img/ITM.png" style="height:250px;
+  width: 300px;"/>
+    
+  </div>
+  <h:form  class="signupForm" name="signupform">
+   <br/>
+	<br/>
+	<br/>
+	<br/> 
+	<br/>
+
+    
+  <ul class="noBullet">
+     <br/>
+	<br/>
+	<br/>
+	<br/> 
+      <li>
+        <label for="Name"></label>
+         <h:outputText value="Last Name:" style="Padding: 50px"/>
+        <h:inputText  value="#{superadminBean.nomsa}" class="inputFields" placeholder="Name" required="true" requiredMesage="Last name required" >
+        </h:inputText>
+         
+      </li>
+    
+
+      <li>
+        <label for="First Name"></label>
+         <h:outputText value="First Name:" style="Padding: 50px"/>
+         <h:inputText  value="#{superadminBean.prenomsa}" class="inputFields" placeholder="First Name" required="true" requiredMesage="Fist name required">
+         </h:inputText>
+      </li>
+      
+     
+      <li>
+        <label for="username"></label>
+         <h:outputText value="Username:" style="Padding: 50px"/>
+         <h:inputText  id="val" value="#{superadminBean.usernamesa}" class="inputFields" placeholder="Username" required="true" requiredMesage="Username required" >
+</h:inputText>
+      </li>
+      
+     
+      <li>
+        <label for="email"></label>
+         <h:outputText value="Password:" style="Padding: 50px"/>
+         <h:inputText  value="#{superadminBean.mdpsa}"  class="inputFields"  placeholder="Email" required="true" requiredMesage="Email required">
+         </h:inputText>
+      </li>
+         
+    
+       
+        
+        <li id="center-btn">
+
+         <h:commandButton action="#{superadminBean.mettreAjoursa()}" value="*Edit" style="border: 1px solid rgba(10, 180, 180, 1);
+  background: rgba(20, 20, 20, .6);
+  font-size: 18px;
+  color: white;
+  margin-top: 20px;
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: .4s;
+ "/>
+      </li>
+ 
+    </ul>
+    <h:message for="val" style="color:red"/>
+ </h:form>
+</div>
+	
+	
+	
+ 	 </ui:define>
+     </ui:composition>

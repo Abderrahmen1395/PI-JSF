@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!-- Mirrored from www.primefaces.org/manhattan/charts.xhtml;jsessionid=node0ceijiubdr7ju1gbsegtadt2nc128614.node0 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Apr 2019 16:23:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="j_idt2">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+            <meta name="apple-mobile-web-app-capable" content="yes" /><link type="text/css" rel="stylesheet" href="javax.faces.resource/theme.css5bc9.css?ln=primefaces-manhattan-teal-yellow" /><link type="text/css" rel="stylesheet" href="javax.faces.resource/fa/font-awesome.css408e.css?ln=primefaces&amp;v=6.2" /><link type="text/css" rel="stylesheet" href="javax.faces.resource/charts/charts.css408e.css?ln=primefaces&amp;v=6.2" /><script type="text/javascript" src="javax.faces.resource/jquery/jquery.js408e.xhtml?ln=primefaces&amp;v=6.2"></script><script type="text/javascript" src="javax.faces.resource/core.js408e.xhtml?ln=primefaces&amp;v=6.2"></script><script type="text/javascript" src="javax.faces.resource/components.js408e.xhtml?ln=primefaces&amp;v=6.2"></script><script type="text/javascript" src="javax.faces.resource/charts/charts.js408e.xhtml?ln=primefaces&amp;v=6.2"></script><script type="text/javascript" src="javax.faces.resource/jquery/jquery-plugins.js408e.xhtml?ln=primefaces&amp;v=6.2"></script><link type="text/css" rel="stylesheet" href="javax.faces.resource/components.css408e.css?ln=primefaces&amp;v=6.2" /><link type="text/css" rel="stylesheet" href="javax.faces.resource/css/nanoscroller.css702f.css?ln=manhattan-layout" /><link type="text/css" rel="stylesheet" href="javax.faces.resource/css/layout-teal-yellow.css702f.css?ln=manhattan-layout" /><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';PrimeFaces.settings.projectStage='Development';}</script>
+        <title>Charts</title><script type="text/javascript" src="javax.faces.resource/js/nanoscroller.js702f.xhtml?ln=manhattan-layout"></script><script type="text/javascript" src="javax.faces.resource/js/layout.js702f.xhtml?ln=manhattan-layout"></script>
+        <script type="text/javascript">
+        function skinChart() {
+            this.cfg.shadow = false;
+            this.cfg.title = '';
+            this.cfg.seriesColors = ['#147df0', '#ed3c76', '#3e9018', '#599597'];
+            this.cfg.grid = {
+                background: '#ffffff',
+                borderColor: '#ffffff',
+                gridLineColor: '#dce2e7',
+                shadow: false
+            };
+            this.cfg.axesDefaults = {
+                borderWidth: 0.1,
+                borderColor: 'd8dae2',
+                rendererOptions: {
+                    textColor: '#434560'
+                }
+            };
+            this.cfg.seriesDefaults = {
+                shadow: false,
+                lineWidth: 1,
+                markerOptions: {
+                    shadow: false,
+                    size: 7,
+                    style: 'circle'
+                }
+            }
+        }
+
+        function skinBar() {
+            this.cfg.shadow = false;
+            this.cfg.title = '';
+            this.cfg.seriesColors = ['#147df0', '#3e9018'];
+            this.cfg.grid = {
+                background: '#ffffff',
+                borderColor: '#ffffff',
+                gridLineColor: '#d8dae2',
+                shadow: false
+            };
+            this.cfg.axesDefaults = {
+                borderWidth: 0.1,
+                borderColor: 'd8dae2',
+                rendererOptions: {
+                    textColor: '#434560'
+                }
+            };
+            this.cfg.seriesDefaults = {
+                shadow: false,
+                lineWidth: 1,
+                renderer: $.jqplot.BarRenderer,
+                markerOptions: {
+                    shadow: false,
+                    size: 7,
+                    style: 'circle'
+                }
+            }
+        }
+
+        function skinArea() {
+            this.cfg.shadow = false;
+            this.cfg.title = '';
+            this.cfg.seriesColors = ['#147df0', '#3e9018'];
+            this.cfg.grid = {
+                background: '#ffffff',
+                borderColor: '#ffffff',
+                gridLineColor: '#dce2e7',
+                shadow: false
+            };
+            this.cfg.axesDefaults = {
+                borderWidth: 0.1,
+                borderColor: 'd8dae2',
+                rendererOptions: {
+                    textColor: '#434560'
+                }
+            };
+            this.cfg.seriesDefaults = {
+                shadow: false,
+                lineWidth: 1,
+                markerOptions: {
+                    shadow: false,
+                    size: 7,
+                    style: 'circle'
+                }
+            }
+        }
+
+        function skinBubble() {
+            this.cfg.shadow = false;
+            this.cfg.title = '';
+            this.cfg.seriesColors = ['#147df0', '#3e9018'];
+            this.cfg.grid = {
+                background: '#ffffff',
+                borderColor: '#ffffff',
+                gridLineColor: '#d8dae2',
+                shadow: false
+            };
+            this.cfg.axesDefaults = {
+                rendererOptions: {
+                    textColor: '#434560'
+                }
+            };
+            this.cfg.seriesDefaults = {
+                shadow: false,
+                lineWidth: 1,
+                renderer: $.jqplot.BubbleRenderer,
+                markerOptions: {
+                    shadow: false,
+                    size: 7,
+                    style: 'circle'
+                }
+            }
+        }
+
+        function skinZoom() {
+            this.cfg.shadow = false;
+            this.cfg.title = '';
+            this.cfg.seriesColors = ['#147df0', '#3e9018'];
+            this.cfg.grid = {
+                background: '#ffffff',
+                borderColor: '#ffffff',
+                gridLineColor: '#d8dae2',
+                shadow: false
+            };
+            this.cfg.axesDefaults = {
+                rendererOptions: {
+                    textColor: '#434560'
+                }
+            };
+            this.cfg.seriesDefaults = {
+                shadow: false,
+                lineWidth: 1,
+                markerOptions: {
+                    shadow: false,
+                    size: 7,
+                    style: 'circle'
+                }
+            }
+        }
+
+        function skinPie() {
+            this.cfg.shadow = false;
+            this.cfg.title = '';
+            this.cfg.seriesColors = ['#147df0', '#ed3c76', '#3e9018', '#ffb200'];
+            this.cfg.grid = {
+                background: '#ffffff',
+                borderColor: '#ffffff',
+                gridLineColor: '#dce2e7',
+                shadow: false
+            };
+            this.cfg.axesDefaults = {
+                rendererOptions: {
+                    textColor: '#434560',
+                }
+            };
+            this.cfg.seriesDefaults = {
+                renderer: $.jqplot.PieRenderer,
+                shadow: false,
+                lineWidth: 1,
+                markerOptions: {
+                    shadow: false,
+                    size: 7,
+                    style: 'circle'
+                }
+            }
+        }
+
+        function skinDonut() {
+            this.cfg.shadow = false;
+            this.cfg.title = '';
+            this.cfg.seriesColors = ['#147df0', '#ed3c76', '#3e9018', '#ffb200'];
+            this.cfg.grid = {
+                background: '#ffffff',
+                borderColor: '#ffffff',
+                gridLineColor: '#d8dae2',
+                shadow: false
+            };
+            this.cfg.axesDefaults = {
+                rendererOptions: {
+                    textColor: '#434560',
+                }
+            };
+            this.cfg.seriesDefaults = {
+                renderer: $.jqplot.DonutRenderer,
+                shadow: false,
+                lineWidth: 1,
+                markerOptions: {
+                    shadow: false,
+                    size: 7,
+                    style: 'circle'
+                }
+            }
+        }
+
+        function skinBarAndLine() {
+            this.cfg.shadow = false;
+            this.cfg.title = '';
+            this.cfg.seriesColors = ['#147df0', '#3e9018'];
+            this.cfg.grid = {
+                background: '#ffffff',
+                borderColor: '#ffffff',
+                gridLineColor: '#d8dae2',
+                shadow: false
+            };
+            this.cfg.axesDefaults = {
+                borderWidth: 0.1,
+                borderColor: 'd8dae2',
+                rendererOptions: {
+                    textColor: '#434560'
+                }
+            };
+            this.cfg.seriesDefaults = {
+                shadow: false,
+                lineWidth: 5,
+                renderer: $.jqplot.BarRenderer,
+                markerOptions: {
+                    shadow: false,
+                    size: 7,
+                    style: 'circle'
+                }
+            }
+        }
+
+        function skinMeterGauge() {
+            this.cfg.title = '';
+            this.cfg.seriesDefaults = {
+                shadow: false,
+                lineWidth: 5,
+                renderer: $.jqplot.MeterGaugeRenderer,
+                rendererOptions: {
+                    shadow: false,
+                    min: 100,
+                    max: 800,
+                    intervals: [200, 300, 400, 500, 600, 700, 800],
+                    intervalColors: ['#147df0', '#ed3c76', '#3e9018', '#da2f31', '#ffb200', '#ffb200', '633ea5']
+                }
+            }
+        }
+
+        function skinMultiAxis() {
+            this.cfg.shadow = false;
+            this.cfg.title = '';
+            this.cfg.seriesColors = ['#3984b8', '#f6ac2b'];
+            this.cfg.grid = {
+                background: '#ffffff',
+                borderColor: '#ffffff',
+                gridLineColor: '#d8dae2',
+                shadow: false
+            };
+            this.cfg.axesDefaults = {
+                borderWidth: 0.1,
+                borderColor: 'bdc3c9',
+                rendererOptions: {
+                    textColor: '#434560'
+                }
+            };
+            this.cfg.seriesDefaults = {
+                shadow: false,
+                lineWidth:1,
+                renderer: $.jqplot.BarRenderer,
+                markerOptions: {
+                    shadow: false,
+                    size: 7,
+                    style: 'circle'
+                }
+            }
+        }
+        </script>
+        <style type="text/css">
+            .jqplot-xaxis-label, .jqplot-yaxis-label, .jqplot-y2axis-label, .jqplot-x2axis-label {
+                color: #757575; 
+            }
+            
+            table.jqplot-table-legend {
+                background-color: #ffffff;
+                color: #434560;
+                border-color: #d8dae2;
+            }
+        </style></head><body>
+        <div class="layout-wrapper layout-slim layout-light">
+            <div class="layout-main">
+
+    <div class="layout-topbar">
+        <a href="#" id="layout-menu-btn" class="menu-btn">
+            <i class="fa fa-bars"></i>
+        </a>
+        
+        <div class="topbar-search">
+            <input type="text" class="ui-widget" />
+            <i class="fa fa-search"></i>
+        </div>
+        
+        <div class="layout-topbar-menu-wrapper">            
+            <ul class="topbar-menu">
+                <li class="profile-item">
+                    <a href="#"><img id="j_idt13" src="javax.faces.resource/images/avatar.png702f.png?ln=manhattan-layout" alt="" />
+                        <span class="topbar-item-name profile-name">Madison Hughes</span>
+                    </a>
+                    
+                    <ul class="animated">
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-user"></i>
+                                <span>Profile</span>
+                                <span class="topbar-badge">5</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-user-secret"></i>
+                                <span>Privacy</span>
+                                <span class="topbar-badge">2</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-cog"></i>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-sign-out"></i>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon swing fa fa-fw fa-envelope-o"></i>
+                        <span class="topbar-badge rubberBand">5</span>
+                        <span class="topbar-item-name">Messages</span>
+                    </a>
+                    <ul class="animated">
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt15" src="javax.faces.resource/images/avatar1.png702f.png?ln=manhattan-layout" alt="" width="35" />
+                                <span>Give me a call</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt17" src="javax.faces.resource/images/avatar2.png702f.png?ln=manhattan-layout" alt="" width="35" />
+                                <span>Reports attached</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt19" src="javax.faces.resource/images/avatar3.png702f.png?ln=manhattan-layout" alt="" width="35" />
+                                <span>About your invoice</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt21" src="javax.faces.resource/images/avatar2.png702f.png?ln=manhattan-layout" alt="" width="35" />
+                                <span>Meeting today</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt23" src="javax.faces.resource/images/avatar4.png702f.png?ln=manhattan-layout" alt="" width="35" />
+                                <span>Out of office</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon fa fa-fw fa-globe"></i>
+                        <span class="topbar-badge rubberBand">2</span>
+                        <span class="topbar-item-name">Notifications</span>
+                    </a>
+                    <ul class="animated">
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-tasks"></i>
+                                <span>Pending tasks</span>
+                                <span class="topbar-badge">6</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-calendar-check-o"></i>
+                                <span>Meeting today</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-download"></i>
+                                <span>Download</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-plane"></i>
+                                <span>Book flight</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <a href="#" class="topbar-menu-btn"><img id="j_idt25" src="javax.faces.resource/images/avatar.png702f.png?ln=manhattan-layout" alt="" />
+            </a>
+            
+            <a href="#" class="rightpanel-btn">
+                <i class="topbar-icon fa fa-fw fa-outdent"></i>
+            </a>
+        </div>
+    </div>
+                
+                <div class="layout-content">
+    
+        <div class="ui-g ui-fluid">
+            <div class="ui-g-12 ui-lg-6">
+                <div class="card">
+                    <h1 class="centerText">Linear Chart</h1><div id="line"></div><script id="line_s" type="text/javascript">$(function(){PrimeFaces.cw("Chart","widget_line",{id:"line",type:"line",responsive:true,data:[[[1,2],[2,1],[3,3],[4,6],[5,8]],[[1,6],[2,3],[3,2],[4,7],[5,9]]],title:"Linear Chart",legendPosition:"e",extender:skinChart,dataRenderMode:"value",axes:{xaxis: {label:"",renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}},yaxis: {label:"",min:0,max:10,renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}}},datatip:true,series:[{label:"Series 1",renderer: $.jqplot.LineRenderer,showLine:true,markerOptions:{show:true, style:'filledCircle'}},{label:"Series 2",renderer: $.jqplot.LineRenderer,showLine:true,markerOptions:{show:true, style:'filledCircle'}}],datatip:true});});</script>
+                </div>
+                
+                <div class="card">
+                    <h1 class="centerText">Bar Chart</h1><div id="bar"></div><script id="bar_s" type="text/javascript">$(function(){PrimeFaces.cw("Chart","widget_bar",{id:"bar",type:"bar",responsive:true,data:[[120,100,44,150,25],[52,60,110,135,120]],title:"Bar Chart",legendPosition:"ne",extender:skinBar,dataRenderMode:"value",axes:{xaxis: {label:"Gender",renderer:$.jqplot.CategoryAxisRenderer,tickOptions:{angle:0}},yaxis: {label:"Births",min:0,max:200,renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}}},datatip:true,series:[{label:"Boys"},{label:"Girls"}],ticks:["2004","2005","2006","2007","2008"],orientation:"vertical",datatip:true});});</script>
+                </div>
+                
+                <div class="card">
+                    <h1 class="centerText">Area Chart</h1><div id="area"></div><script id="area_s" type="text/javascript">$(function(){PrimeFaces.cw("Chart","widget_area",{id:"area",type:"line",responsive:true,data:[[["2004",120],["2005",100],["2006",44],["2007",150],["2008",25]],[["2004",52],["2005",60],["2006",110],["2007",90],["2008",120]]],title:"Area Chart",legendPosition:"ne",extender:skinArea,dataRenderMode:"value",axes:{xaxis: {label:"Years",renderer:$.jqplot.CategoryAxisRenderer,tickOptions:{angle:0}},yaxis: {label:"Fails",min:0,max:300,renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}}},datatip:true,series:[{label:"Boys",renderer: $.jqplot.LineRenderer,fill:true,fillAlpha:1.0,showLine:true,markerOptions:{show:true, style:'filledCircle'}},{label:"Girls",renderer: $.jqplot.LineRenderer,fill:true,fillAlpha:1.0,showLine:true,markerOptions:{show:true, style:'filledCircle'}}],stackSeries:true,showPointLabels:true,datatip:true});});</script>
+                </div>
+                
+                <div class="card">
+                    <h1 class="centerText">Bubble Chart</h1><div id="bubble"></div><script id="bubble_s" type="text/javascript">$(function(){PrimeFaces.cw("Chart","widget_bubble",{id:"bubble",type:"bubble",responsive:true,data:[[[70,183,55,"Acura"],[45,92,36,"Alfa Romeo"],[24,104,40,"AM General"],[50,123,60,"Bugatti"],[15,89,25,"BMW"],[40,180,80,"Audi"],[70,70,48,"Aston Martin"]]],title:"Bubble Chart",extender:skinBubble,dataRenderMode:"value",axes:{xaxis: {label:"Price",renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}},yaxis: {label:"Labels",min:0,max:250,renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}}},datatip:true,showLabels:true,bubbleGradients:false,bubbleAlpha:1.0,datatip:true});});</script>
+                </div>
+                
+                <div class="card">
+                    <h1 class="centerText">Zoom Chart</h1><div id="date"></div><script id="date_s" type="text/javascript">$(function(){PrimeFaces.cw("Chart","widget_date",{id:"date",type:"line",responsive:true,data:[[["2014-01-01",51],["2014-01-06",22],["2014-01-12",65],["2014-01-18",74],["2014-01-24",24],["2014-01-30",51]],[["2014-01-01",32],["2014-01-06",73],["2014-01-12",24],["2014-01-18",12],["2014-01-24",74],["2014-01-30",62]]],title:"Zoom for Details",extender:skinZoom,dataRenderMode:"value",axes:{xaxis: {label:"Dates",max:"2014-02-01",renderer:$.jqplot.DateAxisRenderer,tickOptions:{angle:-50,formatString:"%b %#d, %y"}},yaxis: {label:"Values",renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}}},datatip:true,series:[{label:"Series 1",renderer: $.jqplot.LineRenderer,showLine:true,markerOptions:{show:true, style:'filledCircle'}},{label:"Series 2",renderer: $.jqplot.LineRenderer,showLine:true,markerOptions:{show:true, style:'filledCircle'}}],zoom:true,datatip:true});});</script>
+                </div>
+            </div>
+            <div class="ui-g-12 ui-lg-6">
+                <div class="card">
+                    <h1 class="centerText">Pie Chart</h1><div id="pie"></div><script id="pie_s" type="text/javascript">$(function(){PrimeFaces.cw("Chart","widget_pie",{id:"pie",type:"pie",responsive:true,data:[[["Brand 1",540],["Brand 2",325],["Brand 3",702],["Brand 4",421]]],title:"Simple Pie",legendPosition:"w",extender:skinPie,dataRenderMode:"value",datatip:true,datatipFormat:"%s - %d"});});</script>
+                </div>
+                
+                <div class="card">
+                    <h1 class="centerText">Donut Chart</h1><div id="donut"></div><script id="donut_s" type="text/javascript">$(function(){PrimeFaces.cw("Chart","widget_donut",{id:"donut",type:"donut",responsive:true,data:[[["Brand 1",150],["Brand 2",400],["Brand 3",200],["Brand 4",10]],[["Brand 1",540],["Brand 2",125],["Brand 3",702],["Brand 4",421]],[["Brand 1",40],["Brand 2",325],["Brand 3",402],["Brand 4",421]]],title:"Donut Chart",legendPosition:"w",extender:skinDonut,dataRenderMode:"value",datatip:true,datatipFormat:"%s - %d"});});</script>
+                </div>
+                
+                <div class="card">
+                    <h1 class="centerText">Bar And Line Chart</h1><div id="combined"></div><script id="combined_s" type="text/javascript">$(function(){PrimeFaces.cw("Chart","widget_combined",{id:"combined",type:"bar",responsive:true,data:[[120,100,44,150,25],[52,60,110,135,120]],title:"Bar and Line",legendPosition:"ne",highlightMouseOver:false,extender:skinBarAndLine,dataRenderMode:"value",axes:{xaxis: {label:"",renderer:$.jqplot.CategoryAxisRenderer,tickOptions:{angle:0}},yaxis: {label:"",min:0,max:200,renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}}},series:[{label:"Boys",renderer: $.jqplot.BarRenderer},{label:"Girls",renderer: $.jqplot.LineRenderer,showLine:true,markerOptions:{show:true, style:'filledCircle'}}],ticks:["2004","2005","2006","2007","2008"],orientation:"vertical",showPointLabels:true});});</script>
+                </div>
+                
+                <div class="card">
+                    <h1 class="centerText">Multi Axis Chart</h1><div id="multiAxis"></div><script id="multiAxis_s" type="text/javascript">$(function(){PrimeFaces.cw("Chart","widget_multiAxis",{id:"multiAxis",type:"line",responsive:true,data:[[["2004",120],["2005",100],["2006",44],["2007",150],["2008",25]],[["A",52],["B",60],["C",110],["D",135],["E",120]]],title:"Multi Axis Chart",highlightMouseOver:false,extender:skinMultiAxis,dataRenderMode:"value",axes:{y2axis: {label:"Number",min:0,max:200,renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}},xaxis: {label:"Years",renderer:$.jqplot.CategoryAxisRenderer,tickOptions:{angle:0}},x2axis: {label:"Period",renderer:$.jqplot.CategoryAxisRenderer,tickOptions:{angle:0}},yaxis: {label:"Birth",min:0,max:200,renderer:$.jqplot.LinearAxisRenderer,tickOptions:{angle:0}}},datatip:true,series:[{label:"Boys",renderer: $.jqplot.BarRenderer},{label:"Girls",renderer: $.jqplot.LineRenderer,xaxis:"x2axis",yaxis:"y2axis",showLine:true,markerOptions:{show:true, style:'filledCircle'}}],datatip:true});});</script>
+                </div>
+            </div>
+        </div>
+                </div>
+    
+    <div class="layout-footer clearfix">
+        <a href="dashboard.html"><img id="j_idt40" src="javax.faces.resource/images/logo.png702f.png?ln=manhattan-layout" alt="" height="20" />
+        </a>
+        <div class="layout-footer-icons">
+            <a href="https://github.com/primefaces"><i class="fa fa-github"></i></a>
+            <a href="https://www.facebook.com/groups/primefaces"><i class="fa fa-facebook"></i></a>
+            <a href="http://twitter.com/primefaces"><i class="fa fa-twitter"></i></a>
+        </div>
+    </div>
+                
+                <div class="layout-main-mask"></div>
+            </div>
+
+    <div class="layout-rightpanel">
+        <div class="nano">
+            <div class="nano-content right-panel-scroll-content">
+                <div class="layout-rightpanel-header">
+                    <div class="weather-day">Wednesday</div>
+                    <div class="weather-date">Jan 26</div>
+                </div>
+
+                <div class="layout-rightpanel-content">
+                    <h1>Weather</h1>
+                    <h2>New York, USA</h2>
+
+                    <div class="weather-today">
+                        <span class="weather-today-value">21℃</span><img id="j_idt44" src="javax.faces.resource/images/dashboard/weather-icon-2.svg702f.svg?ln=manhattan-layout" alt="" width="60" />
+                    </div>
+
+                    <ul class="weekly-weather">
+                        <li>
+                            Thursday
+                            <img id="j_idt46" src="javax.faces.resource/images/dashboard/weather-icon-1.svg702f.svg?ln=manhattan-layout" alt="" />
+                            <span class="weekly-weather-value">24</span>
+                        </li>
+                        <li>
+                            Friday
+                            <img id="j_idt48" src="javax.faces.resource/images/dashboard/weather-icon-3.svg702f.svg?ln=manhattan-layout" alt="" />
+                            <span class="weekly-weather-value">19</span>
+                        </li>
+                        <li>
+                            Saturday
+                            <img id="j_idt50" src="javax.faces.resource/images/dashboard/weather-icon-4.svg702f.svg?ln=manhattan-layout" alt="" />
+                            <span class="weekly-weather-value">15</span>
+                        </li>
+                        <li>
+                            Sunday
+                            <img id="j_idt52" src="javax.faces.resource/images/dashboard/weather-icon-1.svg702f.svg?ln=manhattan-layout" alt="" />
+                            <span class="weekly-weather-value">24</span>
+                        </li>
+                        <li>
+                            Monday
+                            <img id="j_idt54" src="javax.faces.resource/images/dashboard/weather-icon-2.svg702f.svg?ln=manhattan-layout" alt="" />
+                            <span class="weekly-weather-value">21</span>
+                        </li>
+                        <li>
+                            Tuesday
+                            <img id="j_idt56" src="javax.faces.resource/images/dashboard/weather-icon-3.svg702f.svg?ln=manhattan-layout" alt="" />
+                            <span class="weekly-weather-value">20</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layout-sidebar">
+        <div class="layout-sidebar-logo">
+            <a href="dashboard.html"><img id="j_idt59" src="javax.faces.resource/images/logo-manhattan.png702f.png?ln=manhattan-layout" alt="" />
+            </a>
+            <a href="#" id="layout-sidebar-anchor" class="layout-sidebar-anchor" title="Toggle Menu">
+                <i class="fa"></i>
+            </a>
+        </div>
+
+        <div class="nano">
+            <div class="nano-content sidebar-scroll-content">
+                <div class="layout-menu-container">
+<form id="menuform" name="menuform" method="post" action="https://www.primefaces.org/manhattan/charts.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="menuform" value="menuform" />
+<ul id="menuform:j_idt61" class="layout-menu"><li id="menuform:pm_dashboard" role="menuitem"><a href="dashboard.html"><i class="fa fa-home fa-fw"></i><span>Dashboard</span></a></li><li id="menuform:pm_menu_colors" role="menuitem"><a href="#"><i class="fa fa-paint-brush fa-fw"></i><span>Menu Colors</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i></a><ul role="menu"><li id="menuform:pm_menu_dark" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_menu_dark':'menuform:pm_menu_dark'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-square fa-fw"></i><span>Dark Menu</span></a></li><li id="menuform:pm_menu_light" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_menu_light':'menuform:pm_menu_light'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-square-o fa-fw"></i><span>Light Menu</span></a></li></ul></li><li id="menuform:pm_layout_modes" role="menuitem"><a href="#"><i class="fa fa-gear fa-fw"></i><span>Layout Modes</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i><span class="menuitem-badge">5</span></a><ul role="menu"><li id="menuform:pm_layout_slim" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_slim':'menuform:pm_layout_slim'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-window-restore fa-fw"></i><span>Slim</span></a></li><li id="menuform:pm_layout_static" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_static':'menuform:pm_layout_static'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-bars fa-fw"></i><span>Static</span></a></li><li id="menuform:pm_layout_overlay" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_overlay':'menuform:pm_layout_overlay'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-arrows-h fa-fw"></i><span>Overlay</span></a></li><li id="menuform:pm_layout_horizontal" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_horizontal':'menuform:pm_layout_horizontal'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-arrows-v fa-fw"></i><span>Horizontal</span></a></li><li id="menuform:pm_layout_toggle" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_toggle':'menuform:pm_layout_toggle'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-chevron-left fa-fw"></i><span>Toggle</span></a></li></ul></li><li id="menuform:pm_themes_colors" role="menuitem"><a href="#"><i class="fa fa-paint-brush fa-fw"></i><span>Themes</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i><span class="menuitem-badge">16</span></a><ul role="menu"><li id="menuform:pm_layout_teal_yellow" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_teal_yellow':'menuform:pm_layout_teal_yellow'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Teal - Yellow</span></a></li><li id="menuform:pm_layout_blue_orange" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_blue_orange':'menuform:pm_layout_blue_orange'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Blue - Orange</span></a></li><li id="menuform:pm_layout_pink_teal" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_pink_teal':'menuform:pm_layout_pink_teal'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Pink - Teal</span></a></li><li id="menuform:pm_layout_indigo_purple" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_indigo_purple':'menuform:pm_layout_indigo_purple'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Indigo - Purple</span></a></li><li id="menuform:pm_layout_green_pink" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_green_pink':'menuform:pm_layout_green_pink'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Green - Pink</span></a></li><li id="menuform:pm_layout_indigo_yellow" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_indigo_yellow':'menuform:pm_layout_indigo_yellow'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Indigo - Yellow</span></a></li><li id="menuform:pm_layout_cyan_deeporange" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_cyan_deeporange':'menuform:pm_layout_cyan_deeporange'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Cyan - Deep Orange</span></a></li><li id="menuform:pm_layout_green_orange" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_green_orange':'menuform:pm_layout_green_orange'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Green - Orange</span></a></li><li id="menuform:pm_layout_orange_cyan" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_orange_cyan':'menuform:pm_layout_orange_cyan'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Orange - Cyan</span></a></li><li id="menuform:pm_layout_blue_grey" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_blue_grey':'menuform:pm_layout_blue_grey'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Blue - Grey</span></a></li><li id="menuform:pm_layout_deeppurple_teal" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_deeppurple_teal':'menuform:pm_layout_deeppurple_teal'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Deep Purple - Teal</span></a></li><li id="menuform:pm_layout_pink_cyan" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_pink_cyan':'menuform:pm_layout_pink_cyan'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Pink - Cyan</span></a></li><li id="menuform:pm_layout_orange_indigo" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_orange_indigo':'menuform:pm_layout_orange_indigo'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Orange - Indigo</span></a></li><li id="menuform:pm_layout_darkpink_cyan" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_darkpink_cyan':'menuform:pm_layout_darkpink_cyan'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Dark Pink - Cyan</span></a></li><li id="menuform:pm_layout_green_purple" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_green_purple':'menuform:pm_layout_green_purple'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Green - Purple</span></a></li></ul></li><li id="menuform:pm_components" role="menuitem" class="orange-badge"><a href="#"><i class="fa fa-sitemap fa-fw"></i><span>Components</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i></a><ul role="menu"><li id="menuform:pm_sample" role="menuitem"><a href="sample.html"><i class="fa fa-columns fa-fw"></i><span>Sample Page</span></a></li><li id="menuform:pm_forms" role="menuitem"><a href="forms.html"><i class="fa fa-code fa-fw"></i><span>Forms</span></a></li><li id="menuform:pm_data" role="menuitem"><a href="data.html"><i class="fa fa-table fa-fw"></i><span>Data</span></a></li><li id="menuform:pm_panels" role="menuitem"><a href="panel.html"><i class="fa fa-list-alt fa-fw"></i><span>Panels</span></a></li><li id="menuform:pm_overlays" role="menuitem"><a href="overlay.html"><i class="fa fa-square fa-fw"></i><span>Overlays</span></a></li><li id="menuform:pm_menus" role="menuitem"><a href="menu.html"><i class="fa fa-minus-square-o fa-fw"></i><span>Menus</span></a></li><li id="menuform:pm_messages" role="menuitem"><a href="messages.html"><i class="fa fa-circle-o-notch fa-fw"></i><span>Messages</span></a></li><li id="menuform:pm_charts" role="menuitem"><a href="charts.html"><i class="fa fa-area-chart fa-fw"></i><span>Charts</span></a></li><li id="menuform:pm_file" role="menuitem"><a href="file.html"><i class="fa fa-arrow-circle-o-up fa-fw"></i><span>File</span></a></li><li id="menuform:pm_misc" role="menuitem"><a href="misc.html"><i class="fa fa-user-secret fa-fw"></i><span>Misc</span></a></li></ul></li><li id="menuform:pm_default" role="menuitem"><a href="#"><i class="fa fa-life-saver fa-fw"></i><span>Pages</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i></a><ul role="menu"><li id="menuform:pm_empty" role="menuitem"><a href="empty.html"><i class="fa fa-square-o fa-fw"></i><span>Empty Page</span></a></li><li id="menuform:pm_landing" role="menuitem"><a href="landing.html" target="_blank"><i class="fa fa-globe fa-fw"></i><span>Landing Page</span></a></li><li id="menuform:pm_login" role="menuitem"><a href="login.html" target="_blank"><i class="fa fa-sign-in fa-fw"></i><span>Login Page</span></a></li><li id="menuform:pm_error" role="menuitem"><a href="error.html" target="_blank"><i class="fa fa-exclamation-circle fa-fw"></i><span>Error Page</span></a></li><li id="menuform:pm_404" role="menuitem"><a href="404.html" target="_blank"><i class="fa fa-times fa-fw"></i><span>404 Page</span></a></li><li id="menuform:pm_access" role="menuitem"><a href="access.html" target="_blank"><i class="fa fa-exclamation-triangle fa-fw"></i><span>Access Denied Page</span></a></li></ul></li><li id="menuform:pm_hierarchy" role="menuitem"><a href="#"><i class="fa fa-tree fa-fw"></i><span>Menu Hierarchy</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i></a><ul role="menu"><li id="menuform:pm_sm1" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Submenu 1</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i></a><ul role="menu"><li id="menuform:pm_sm11" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Submenu 1.1</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i></a><ul role="menu"><li id="menuform:pm_lnk111" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Link 1.1.1</span></a></li><li id="menuform:pm_lnk112" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Link 1.1.2</span></a></li><li id="menuform:pm_lnk113" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Link 1.1.3</span></a></li></ul></li><li id="menuform:pm_sm12" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Submenu 1.2</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i></a><ul role="menu"><li id="menuform:pm_lnk121" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Link 1.2.1</span></a></li></ul></li></ul></li><li id="menuform:pm_sm2" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Submenu 2</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i></a><ul role="menu"><li id="menuform:pm_sm21" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Submenu 2.1</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i></a><ul role="menu"><li id="menuform:pm_lnk211" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Link 2.1.1</span></a></li><li id="menuform:pm_lnk212" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Link 2.1.2</span></a></li></ul></li><li id="menuform:pm_sm22" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Submenu 2.2</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i></a><ul role="menu"><li id="menuform:pm_lnk221" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Link 2.2.1</span></a></li></ul></li></ul></li></ul></li><li id="menuform:pm_doc" role="menuitem"><a href="docs.html"><i class="fa fa-book fa-fw"></i><span>Docs</span></a></li><li id="menuform:pm_buynow" role="menuitem"><a href="https://www.primefaces.org/store"><i class="fa fa-credit-card-alt fa-fw"></i><span>Buy Now</span></a></li></ul><script id="menuform:j_idt61_s" type="text/javascript">PrimeFaces.cw("Manhattan","widget_menuform_j_idt61",{id:"menuform:j_idt61"});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="2083303011951196962:3086140676529441066" autocomplete="off" />
+</form>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div><div id="j_idt64" style="width:32px;height:32px;position:fixed;right:7px;bottom:7px"><div id="j_idt64_start" style="display:none">
+               <i class="fa fa-circle-o-notch fa-spin ajax-loader" aria-hidden="true"></i></div><div id="j_idt64_complete" style="display:none"></div></div><script id="j_idt64_s" type="text/javascript">$(function(){PrimeFaces.cw("AjaxStatus","widget_j_idt64",{id:"j_idt64"});});</script></body>
+
+
+<!-- Mirrored from www.primefaces.org/manhattan/charts.xhtml;jsessionid=node0ceijiubdr7ju1gbsegtadt2nc128614.node0 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Apr 2019 16:23:14 GMT -->
+</html>

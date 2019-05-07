@@ -1,0 +1,28 @@
+<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      >
+      <h:form >
+      <h:panelGrid coumns="2">
+      
+      
+      <h:outputText value="Name:"/>
+      <h:inputText value="#{superadminBean.nom}"/>
+      
+      <h:outputText value="First Name:"/>
+      <h:inputText value="#{superadminBean.prenom}"/>
+      
+      <h:outputText value="Username:"/>
+      <h:inputText value="#{superadminBean.username}"/>
+      
+      <h:outputText value="Email:"/>
+      <h:inputText value="#{superadminBean.email}"/>
+      
+      <h:outputText value="School:"/>
+      <h:inputText value="#{superadminBean.school}"/>
+      </h:panelGrid>
+      <h:commandButton action="#{superadminBean.mettreAjourEmploye()}" value="*Edit" />
+      </h:form>
+      
+     </ui:composition>

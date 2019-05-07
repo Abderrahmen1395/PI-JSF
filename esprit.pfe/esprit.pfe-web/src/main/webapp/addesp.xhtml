@@ -1,0 +1,132 @@
+<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      template="/templateEtudiant.xhtml"
+      
+                 xmlns:p="http://primefaces.org/ui">
+<ui:define name="pageCSS">
+		
+		<h:outputStylesheet library="css" name="bootstrap.min.css" />
+		<h:outputStylesheet library="font-awesome" name="css/font-awesome.css" />
+		<h:outputStylesheet library="css" name="plugins/iCheck/custom.css" />
+		<h:outputStylesheet library="css"
+			name="plugins/steps/jquery.steps.css" />
+		<h:outputStylesheet library="css" name="animate.css" />
+		<h:outputStylesheet library="css" name="style.css" />
+			<h:outputStylesheet library="css" name="style2.css" />
+
+	</ui:define>
+	<ui:define name="titleHere"> 
+	<br/>
+	<br/>
+	<br/>
+	<br/> 
+	   
+
+<div class="signupSection">
+  <div class="info">
+  <br/>
+	<br/>
+	<br/>
+	<br/> 
+	<br/>
+	<br/>
+	<br/>
+	<br/> 
+    <h2   class="font-bold" style="text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+               
+               font-weight: 900;" >Add ESP</h2>
+    <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>
+    <br/>
+	<br/>
+	<br/>
+	<br/> 
+    <img alt="image" 
+        src="resources/img/ESPA.png" style="height:250px;
+  width: 300px;"/>
+    
+  </div>
+  <h:form enctype="multipart/form-data" class="signupForm" name="signupform">
+   <br/>
+	<br/>
+	<br/>
+	<br/> 
+	<br/>
+
+    
+  <ul class="noBullet">
+     <br/>
+	<br/>
+	<br/>
+	<br/> 
+      
+    
+      
+      
+    <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+        <h:outputText  value="Confidential:" style="margin-left: 100px;font-weight: bold;"/>
+       <p:selectOneListbox id="basic" value="#{etudiantBean.autorisationesp}" style="margin-left: 20px">
+            <f:selectItem itemLabel="Public" itemValue="1" />
+            <f:selectItem itemLabel="Private" itemValue="0" />
+
+        </p:selectOneListbox>
+        
+          <h:outputLabel for="multiple" value="Key words:" style="margin-top: 40px;margin-left: 95px;" />
+        <p:selectCheckboxMenu id="multiple" value="#{etudiantBean.selectedCities2}" label="Cities" multiple="true"
+                              filter="true" filterMatchMode="startsWith" panelStyle="width:250px" style="margin-top: 40px;margin-left: 20px;">
+            <f:selectItems value="#{etudiantBean.cities}" />
+        </p:selectCheckboxMenu>
+    </h:panelGrid>
+      <p:growl id="messages" showDetail="true" />
+     
+    <h:inputFile id="uploader" value="#{etudiantBean.part}" validator="#{etudiantBean.validate}" style="margin-left: 100px ;margin-top: 50px"/>
+    <h:message for="uploader"/>
+      
+    
+    
+        
+        <li id="center-btn">
+
+         <h:commandButton action="#{etudiantBean.ajoutesp()}" value="+ADD" style="border: 1px solid rgba(10, 180, 180, 1);
+  background: rgba(20, 20, 20, .6);
+  font-size: 18px;
+  margin-top: 50px;
+  color: white;
+  margin-top: 20px;
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: .4s;
+ "/>
+      </li>
+ 
+    </ul>
+    <h:message for="val" style="color:red"/>
+ </h:form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+      
+      
+      </ui:define>	
+     </ui:composition>

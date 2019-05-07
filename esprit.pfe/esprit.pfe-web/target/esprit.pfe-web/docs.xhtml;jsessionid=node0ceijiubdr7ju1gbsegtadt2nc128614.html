@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!-- Mirrored from www.primefaces.org/manhattan/docs.xhtml;jsessionid=node0ceijiubdr7ju1gbsegtadt2nc128614.node0 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Apr 2019 16:23:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="j_idt2">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+            <meta name="apple-mobile-web-app-capable" content="yes" /><link type="text/css" rel="stylesheet" href="javax.faces.resource/theme.css5bc9.css?ln=primefaces-manhattan-teal-yellow" /><link type="text/css" rel="stylesheet" href="javax.faces.resource/fa/font-awesome.css408e.css?ln=primefaces&amp;v=6.2" /><script type="text/javascript" src="javax.faces.resource/jquery/jquery.js408e.xhtml?ln=primefaces&amp;v=6.2"></script><script type="text/javascript" src="javax.faces.resource/jquery/jquery-plugins.js408e.xhtml?ln=primefaces&amp;v=6.2"></script><script type="text/javascript" src="javax.faces.resource/core.js408e.xhtml?ln=primefaces&amp;v=6.2"></script><link type="text/css" rel="stylesheet" href="javax.faces.resource/components.css408e.css?ln=primefaces&amp;v=6.2" /><link type="text/css" rel="stylesheet" href="javax.faces.resource/css/nanoscroller.css702f.css?ln=manhattan-layout" /><link type="text/css" rel="stylesheet" href="javax.faces.resource/css/layout-teal-yellow.css702f.css?ln=manhattan-layout" /><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';PrimeFaces.settings.projectStage='Development';}</script>
+        <title>Documentation</title><script type="text/javascript" src="javax.faces.resource/js/nanoscroller.js702f.xhtml?ln=manhattan-layout"></script><script type="text/javascript" src="javax.faces.resource/js/layout.js702f.xhtml?ln=manhattan-layout"></script>
+        <style type="text/css">
+            .docs h1 {
+                margin-top: 30px;
+                margin-bottom: 10px;
+            }
+            
+            .docs p,
+            .docs li {
+                line-height: 1.5;
+            }
+            
+            .docs pre {
+                font-family: monospace;
+                background-color: #efeff1;
+                color: #333333;
+                padding: 1em;
+                font-size: 14px;
+                border-radius: 3px;
+                overflow: auto;
+            }
+            
+            .video-container {
+                position: relative;
+                width: 100%;
+                height: 0;
+                padding-bottom: 56.25%;
+            }
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style></head><body>
+        <div class="layout-wrapper layout-slim layout-light">
+            <div class="layout-main">
+
+    <div class="layout-topbar">
+        <a href="#" id="layout-menu-btn" class="menu-btn">
+            <i class="fa fa-bars"></i>
+        </a>
+        
+        <div class="topbar-search">
+            <input type="text" class="ui-widget" />
+            <i class="fa fa-search"></i>
+        </div>
+        
+        <div class="layout-topbar-menu-wrapper">            
+            <ul class="topbar-menu">
+                <li class="profile-item">
+                    <a href="#"><img id="j_idt13" src="javax.faces.resource/images/avatar.png702f.png?ln=manhattan-layout" alt="" />
+                        <span class="topbar-item-name profile-name">Madison Hughes</span>
+                    </a>
+                    
+                    <ul class="animated">
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-user"></i>
+                                <span>Profile</span>
+                                <span class="topbar-badge">5</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-user-secret"></i>
+                                <span>Privacy</span>
+                                <span class="topbar-badge">2</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-cog"></i>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-sign-out"></i>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon swing fa fa-fw fa-envelope-o"></i>
+                        <span class="topbar-badge rubberBand">5</span>
+                        <span class="topbar-item-name">Messages</span>
+                    </a>
+                    <ul class="animated">
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt15" src="javax.faces.resource/images/avatar1.png702f.png?ln=manhattan-layout" alt="" width="35" />
+                                <span>Give me a call</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt17" src="javax.faces.resource/images/avatar2.png702f.png?ln=manhattan-layout" alt="" width="35" />
+                                <span>Reports attached</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt19" src="javax.faces.resource/images/avatar3.png702f.png?ln=manhattan-layout" alt="" width="35" />
+                                <span>About your invoice</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt21" src="javax.faces.resource/images/avatar2.png702f.png?ln=manhattan-layout" alt="" width="35" />
+                                <span>Meeting today</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt23" src="javax.faces.resource/images/avatar4.png702f.png?ln=manhattan-layout" alt="" width="35" />
+                                <span>Out of office</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon fa fa-fw fa-globe"></i>
+                        <span class="topbar-badge rubberBand">2</span>
+                        <span class="topbar-item-name">Notifications</span>
+                    </a>
+                    <ul class="animated">
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-tasks"></i>
+                                <span>Pending tasks</span>
+                                <span class="topbar-badge">6</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-calendar-check-o"></i>
+                                <span>Meeting today</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-download"></i>
+                                <span>Download</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-plane"></i>
+                                <span>Book flight</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <a href="#" class="topbar-menu-btn"><img id="j_idt25" src="javax.faces.resource/images/avatar.png702f.png?ln=manhattan-layout" alt="" />
+            </a>
+            
+            <a href="#" class="rightpanel-btn">
+                <i class="topbar-icon fa fa-fw fa-outdent"></i>
+            </a>
+        </div>
+    </div>
+                
+                <div class="layout-content">
+    
+        <div class="ui-g">
+            <div class="ui-g-12">
+                <div class="card docs">
+                    <h1>Getting Started</h1>
+                    <p>First of all, you'd need SASS to compile CSS, proceed to <a href="https://sass-lang.com/install">SASS Installation</a> before beginning if you do not have SASS available in your command line.</p>
+                    <p>Demo project has an integrated jetty plugin so running the sample is easy as building the css first followed by the mvn jetty:run command.</p>
+<pre>
+sass --update src/main/webapp/resources/ --sourcemap=none
+mvn jetty:run
+</pre> 
+                    <p>Navigate to http://localhost:8080/manhattan to view the demos which is exactly same as the live version.</p>                 
+                    
+                    <h1>Layout</h1>
+                    <p>Manhattan utilizes <a href="http://docs.oracle.com/javaee/6/tutorial/doc/giqxp.html">JSF templating APIs</a> and provides a main template.xhtml along with additional <i>topbar</i>, <i>sidebar</i>, <i>rightpanel</i>, <i>footer</i> fragments for the base layout. 
+                        These xhtml files must be placed under WEB-INF folder and client pages should reference the template.xhtml as their template. 
+                        Provided empty.xhtml is a sample content page using the main template.xhtml that defines "content" as the main ui:define placeholder. By default template defines 3 placeholders 
+                        (page title, header content and actual content)to insert content and you can add more as per your requirements.</p>
+                        
+                    <p>Sample page below uses the main template from Manhattan.</p>
+<pre>
+&lt;ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml"&gt;
+                
+    &lt;ui:define name="title"&gt;Test Page&lt;/ui:define&gt;
+
+    &lt;ui:define name="content"&gt;
+        Content goes here
+    &lt;/ui:define&gt;
+&lt;/ui:composition&gt;
+</pre>
+                    
+                    <p>Other required resources are the css, js and images that are located inside resources/manhattan-layout folder, simply copy the manhattan-layout folder to your %WEB-APP-FOLDER%/resources folder 
+                        so that final path would be %WEB-APP-FOLDER%/resources/manhattan-layout/. Please refer to demo app or maven project of the demo app as the reference.</p>
+                    
+                    <h1>GuestPreferences Bean</h1>
+                    <p>GuestPreferences is a simple session scoped bean to keep the user customizations of the layout, template xhtml files and theme configuration
+                    refer to this bean to dynamically change their behavior such as menu mode or theme. This bean is not necessary to run the Manhattan
+                    and only used for demo purposes. For example template.xhtml includes layout color depending on a user preference using an EL expression.</p>
+<pre>
+&lt;h:outputStylesheet name="css/layout-#{guestPreferences.theme}.css" library="manhattan-layout" /&gt;   
+</pre>               
+                    <p>In your application, you may also need a similar bean to make the template dynamic or choose a static color with;</p>  
+                    
+<pre>
+&lt;h:outputStylesheet name="css/layout-teal-yellow.css" library="manhattan-layout" /&gt;   
+</pre>   
+
+                    <p>Similarly PrimeFaces theme can be changed dynamically.</p>
+<pre>
+&lt;context-param&gt;
+    &lt;param-name&gt;primefaces.THEME&lt;/param-name&gt;
+    &lt;param-value&gt;manhattan-#{guestPreferences.theme}&lt;/param-value&gt;
+&lt;/context-param&gt;
+</pre>
+
+                    <p>Source code of GuestPreferences.</p>
+<pre>
+public class GuestPreferences implements Serializable {
+
+    public enum LayoutMode {
+        SLIM,
+        STATIC,
+        OVERLAY,
+        HORIZONTAL,
+        TOGGLE
+    };
+        
+    private String theme = "teal-yellow";
+
+    private LayoutMode layoutMode = LayoutMode.SLIM;
+
+    private boolean lightMenu = true;
+                            
+    public String getTheme() {		
+        return theme;
+    }
+    
+    public void setTheme(String theme) {
+        this.theme = theme;
+    }
+    
+    public LayoutMode getLayoutMode() {		
+        return layoutMode;
+    }
+    
+    public void setLayoutMode(LayoutMode layoutMode) {
+        this.layoutMode = layoutMode;
+    }
+
+    public void updateLayoutMode(String mode) {
+        this.layoutMode = LayoutMode.valueOf(mode);
+    }
+
+    public boolean isLightMenu() {
+        return this.lightMenu;
+    }
+
+    public void setLightMenu(boolean value) {
+        this.lightMenu = value;
+    }
+    
+    public String getLayoutStyleClass() {
+        String layoutStyleClass;
+        switch(this.layoutMode) {
+            case SLIM:
+                layoutStyleClass = "layout-slim";
+            break;
+
+            case STATIC:
+                layoutStyleClass = "layout-static";
+            break;
+
+            case OVERLAY:
+                layoutStyleClass = "layout-overlay";
+            break;
+
+            case HORIZONTAL:
+                layoutStyleClass = "layout-horizontal";
+            break;
+
+            case TOGGLE:
+                layoutStyleClass = "layout-toggle";
+            break;
+
+            default:
+                layoutStyleClass = "layout-slim";
+            break;
+        }
+
+        if(this.lightMenu) {
+            layoutStyleClass += " layout-light";
+        }
+
+        return layoutStyleClass;
+    }
+}
+</pre>
+                    
+                    <h1>Theme</h1>
+                    <p>Manhattan provides 15 PrimeFaces themes out of the box, setup of a theme simple as including the theme jar in your classpath and defining primefaces.THEME context parameter in web.xml such as "manhattan-green". Full list of 
+                    available themes are;</p>
+                    
+                    <ul>
+                        <li>primefaces-manhattan-blue-grey</li>
+                        <li>primefaces-manhattan-blue-orange</li>
+                        <li>primefaces-manhattan-cyan-deeporange</li>
+                        <li>primefaces-manhattan-darkpink-cyan</li>
+                        <li>primefaces-manhattan-deeppurple-teal</li>
+                        <li>primefaces-manhattan-green-orange</li>
+                        <li>primefaces-manhattan-green-pink</li>
+                        <li>primefaces-manhattan-green-purple</li>
+                        <li>primefaces-manhattan-indigo-purple</li>
+                        <li>primefaces-manhattan-indigo-yellow</li>
+                        <li>primefaces-manhattan-orange-cyan</li>
+                        <li>primefaces-manhattan-orange-indigo</li>
+                        <li>primefaces-manhattan-pink-cyan</li>
+                        <li>primefaces-manhattan-pink-teal</li>
+                        <li>primefaces-manhattan-teal-yellow</li>
+                    </ul>
+                    
+                    <p>A custom theme can be developed by the following steps.</p>
+                    <ul>
+                        <li>Create a custom theme folder such as primefaces-manhattan-myown under webapp/resources and place an empty theme.scss inside.</li>
+                        <li>Copy the sass folder from the distribution to webapp/resources.</li>
+                        <li>Define the variables listed below and import the <i>/sass/theme/_theme.scss</i> file.</li>
+                        <li>Build the scss to generate css.</li>
+                        <li>Set primefaces.THEME context parameter as <i>manhattan-myown</i></li>
+                        <li>Either bundle the css in a jar file or serve from webapp/resources/primefaces-manhattan-myown folder</li>
+                    </ul>
+                    
+                    <p>Here are the variables required to create a theme.</p>
+                        
+<pre>
+$primaryColor:#147df0;
+$primaryTextColor:#ffffff;
+$primaryDarkColor:#1165c2;
+$inputFocusBorderColor:#77aeeb;
+$highlightBgColor:#ffaa00;
+$highlightTextColor:#ffffff;
+$datableEvenRowBgColor:#fdfafc;
+$datatableHoverBgColor:#e3e1e2;
+
+@import '../sass/theme/_theme';
+</pre> 
+                        
+                    <p> An example sass command to compile the css would be;</p>
+                        
+<pre>
+sass src/main/webapp/resources/primefaces-manhattan-myown/theme.scss src/main/webapp/resources/primefaces-manhattan-myown/theme.css  --sourcemap=none
+</pre> 
+
+                    <p>Watch mode is handy to avoid compiling everytime when a change is made, instead use the following command
+                    so that sass generates the file whenever you make a customization. This builds all css files whenever a change is made to any scss file.</p>
+<pre>
+sass -w src/main/webapp/resources/ --sourcemap=none
+</pre> 
+
+                    <h1>Layout</h1>
+                    <p>Layout customization is similar to theme method.</p>
+                    <ul>
+                        <li>Choose a layout name such as layout-myown.</li>
+                        <li>Create an empty file named layout-myown.scss inside resources/manhattan-layout/css folder.</li>
+                        <li>Copy the sass folder from the distribution to webapp/resources.</li>
+                        <li>Define the variables listed below and import the <i>/sass/layout/_layout.scss</i> file.</li>
+                        <li>Build the scss to generate css</li>
+                        <li>Serve the css by importing it using a link tag or h:outputStylesheet.</li>
+                    </ul>
+
+                    <p>Here are the variables required to create a layout.</p>
+                        
+<pre>
+$sidebarTopStartBgColor:#3d72b4;
+$sidebarTopEndBgColor:#525252;
+$sidebarAnchorColor:#ffffff;
+$menuitemActiveColor:#3D72B4;
+$rootMenuitemActiveIconColor:#ffffff;
+$menuitemBadgeBgColor:#7f7f7f;
+$menuitemBadgeTextColor:#ffffff;
+$horizontalLayoutTopbarTextColor:#ffffff;
+$horizontalLayoutTopbarTextHoverColor:#BDD0E7;
+
+@import '../../sass/layout/_layout';
+</pre> 
+
+                    <h1>SASS Variables</h1>
+                    <p>In case you'd like to customize common variables, the _common.scss under sass variables folder is where the core variables (e.g. font size, paddings) for the layout are defined.</p>
+<pre>
+$fontFamily:"Source Sans Pro","Helvetica Neue",sans-serif;
+$fontSize:14px;
+$textColor:#434560;
+$textSecondaryColor:lighten($textColor,25%);
+$borderRadius:2px;
+$dividerColor:#d8dae2;
+$transitionDuration:.3s;
+
+$blue:#147df0;
+$pink:#ed3c76;
+$green:#3e9018;
+$red:#da2f31;
+$orange:#ffb200;
+$teal:#599597;
+$purple:#633ea5;
+$black:#000000;
+$yellow:#ffd644;
+</pre> 
+
+                    <p>_layout.scss under variables define the shared variables of the layout.</p>
+<pre>
+@import './common';
+
+$bodyBgColor:#f4f3f8;
+
+//topbar
+$topbarBgColor:#ffffff;
+$topbarIconColor:#b6b7c2;
+$topbarIconHoverColor:#7f8087;
+$topbarIconActiveColor:#48494d;
+$topbarInputBorderColor:#d8dae2;
+$topbarSubmenuHoverBgColor:#f1f2f7;
+$topbarMobileMenuBgColor:#ffffff;
+
+//dark sidebar - default
+$sidebarBgColor:#2c2d3c;
+$menuitemIconBgColor:#1d1d26;
+$menuitemTextColor:#d9dae3;
+$menuitemHoverBgColor:#1d1d26;
+$submenuitemHoverBgColor:#242430;
+$activeMenuitemBgColor:#17171e;
+$submenuBgColor:#17171e;
+
+//light sidebar
+$lightSidebarBgColor:#f2f2f7;
+$lightSidebarMenuitemIconBgColor:#d9d9de;
+$lightSidebarMenuitemTextColor:#575867;
+$lightSidebarMenuitemHoverBgColor:#d9d9de;
+$lightSidebarSubmenuitemHoverBgColor:#d9d9de;
+$lightSidebarActiveMenuitemBgColor:#ffffff;
+$lightSidebarSubmenuBgColor:#ffffff;
+
+//misc
+$rightPanelBgColor:#ffffff;
+$mobileBreakpoint:1280px;
+$contentMobileMaskBgColor:#ffffff;
+</pre>
+
+                    <p>Similarly _theme.scss files contains the shared variables of the PrimeFaces theme.</p>
+<pre>
+@import './common';
+
+/* Icons */
+$iconFontSize:13px;
+$iconWidth:16px;
+
+/* Error */
+$errorColor:#f28a8b;
+
+/* Headers */
+$headerPadding:6px 12px;
+$headerHoverBgColor:#f1f2f7;
+
+/* Contents */
+$contentPadding:6px 12px;
+$contentBorderColor:#b6b7c2;
+$contentBgColor:#ffffff;
+
+/* Forms */
+$inputBgColor:#ffffff;
+$inputPadding:6px;
+$inputBorderColor:#b6b7c2;
+$inputHoverBorderColor:#7f8087;
+
+//groups
+$inputGroupBorderColor:#b6b7c2;
+$inputGroupBgColor:#ffffff;
+$inputGroupTextColor:$textColor;
+$inputGroupIconColor:$textSecondaryColor;
+$inputGroupAddonMinWidth:2*$fontSize;
+$checkboxWidth:20px;
+$checkboxHeight:20px;
+
+/* Buttons */
+$buttonTextColor:#ffffff;
+$toggleButtonBgColor:#b6b7c2;
+
+/* List Items */
+$listItemPadding:6px 12px;
+$listItemHoverBgColor:#f1f2f7;
+$listItemHoverTextColor:#434560;
+
+/* Messages */
+$infoMessageBgColor:#a8cef8;
+$infoMessageTextColor:#434560;
+$warnMessageBgColor:#f7e9b9;
+$warnMessageTextColor:#434560;
+$errorMessageBgColor:#f9bbbc;
+$errorMessageTextColor:#434560;
+$fatalMessageBgColor:#b6b7c2;
+$fatalMessageTextColor:#434560;
+
+/* Data */
+$datatableCellBorderColor:#dbe1e6;
+
+/* TabView */
+$tabHeaderPadding:8px 12px;
+
+/* Panel */
+$panelContentBorderColor:#DCE1E7;
+</pre>
+
+                    <h1>Menu</h1>    
+                    <p>Menu is a regular JSF component that supports PrimeFaces MenuModel API allowing both declarative and programmatic approaches.</p>
+<pre>
+xmlns:pv="http://primefaces.org/manhattan"
+
+&lt;pm:menu&gt;
+&lt;/pm:menu&gt;
+</pre>  
+                    <p>Menu has 5 modes with 2 color alternatices. Layout wrapper element in template.xhtml is used to define which mode to use by adding specific classes.</p>
+                    <ul>
+                        <li>"layout-slim": Slim menu</li>
+                        <li>"layout-static": Static menu</li>
+                        <li>"layout-overlay": Overlay menu</li>
+                        <li>"layout-horizontal": Horizontal menu</li>
+                        <li>"layout-toggle": Toggle menu</li>
+                    </ul>
+<pre>
+&lt;div class="layout-wrapper layout-horizontal"&gt;
+...
+&lt;/div&gt;
+</pre>
+                    <p>Default color scheme of the menu is dark and adding "layout-light" style class to the .layout-wrapper enables light mode.</p>
+<pre>
+&lt;div class="layout-wrapper layout-overlay layout-light"&gt;
+...
+&lt;/div&gt;
+</pre>
+
+                    <p>Layout mode can be dynamic using an EL expression as well, refer to GuestPreferences.java for an example.</p>
+<pre>
+&lt;div class="layout-wrapper layout-slim layout-light"&gt;
+...
+&lt;/div&gt;
+</pre>
+
+                    <h1>Icons</h1>
+                    <p>Manhattan Layout uses font awesome icons for layout so enable font awesome support in PrimeFaces by setting primefaces.FONT_AWESOME context parameter in web.xml as true. If your PrimeFaces version 
+                    does not have the font awesome integration, include the font-awesome manually in your application.</p>
+
+                    <h1>Card</h1>
+                    <p>Card is a section to group content and layout provides a built-in css for it. Apply .card style class to your container to use it. If the
+                    card has a title defined with h1 tag, add card-w-title to adjust paddings.</p>
+<pre>
+&lt;div class="card"&gt;
+    Content here
+&lt;/div&gt;
+
+&lt;div class="card card-w-title"&gt;
+    &lt;h1&gt;Card with Title&lt;h1&gt;
+    Content here
+&lt;/div&gt;
+</pre>  
+
+                    <h1>Grid CSS</h1>
+                    <p>Manhattan uses new PrimeFaces Grid CSS (ui-g-*) throughout the samples, we strongly suggest using Grid CSS as your layout framework as it is well tested and supported by PrimeFaces. Grid CSS 
+                    is automatically included on newer versions however if your PrimeFaces version is older than 5.3.14, add the provided grid.css file under /manhattan-layout/css/ folder to your template manually.</p> 
+                    
+                    <h1>Tips</h1>
+                    <ul>
+                        <li>Familiarity with <a href="http://sass-lang.com/">SASS</a> is required to make customizations to the layout and theme.</li>
+                        <li>Demo application war and the maven project tag are included in distribution however you don't necessarily need them to install Manhattan, the actual artifacts required are the layout zip file and the theme jar.</li>
+                        <li>Sample demo application war includes the JSF libraries so it is suggested to remove them from the war file when you deploy to an appserver.</li>
+                        <li>When running the maven project, you need to build the sass with (sass --update src/main/webapp/resources/ --sourcemap=none) command.</li>
+                    </ul>
+                    
+                    <h1>Migration Guide</h1>
+                    <p>2.0.2 to 3.0.0</p>
+                    <ul>
+                        <li>Update ManhattanMenu*.java file</li>
+                        <li>Replace theme jar with new jar</li>
+                    </ul>
+                    <p>2.0.1 to 2.0.2</p>
+                    <ul>
+                        <li>Update layout.js, layout css and ManhattanMenu*.java files</li>
+                        <li>Replace theme jar with new jar</li>
+                    </ul>
+                    
+                    <p>2.0.0 to 2.0.1</p>
+                    <ul>
+                        <li>Update layout.js and layout css files</li>
+                        <li>Replace theme jar with new jar</li>
+                    </ul>
+                    
+                    <p>1.0.2 to 2.0.0</p>
+                    <ul>
+                        <li>Update layout.js and layout css files</li>
+                        <li>Update all xhtml files under WEB-INF for the new template.</li>
+                        <li>Replace theme jar with new jar</li>
+                    </ul>
+
+                    <p>1.0.2 to 1.0.3</p>
+                    <ul>
+                        <li>Update layout.js and layout css files</li>
+                        <li>Replace theme jar with new jar</li>
+                    </ul>
+                    <p>1.0 to 1.0.1</p>
+                    <ul>
+                        <li>Update _exception.scss files</li>
+                        <li>Replace theme jar with new jar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+                </div>
+    
+    <div class="layout-footer clearfix">
+        <a href="dashboard.html"><img id="j_idt31" src="javax.faces.resource/images/logo.png702f.png?ln=manhattan-layout" alt="" height="20" />
+        </a>
+        <div class="layout-footer-icons">
+            <a href="https://github.com/primefaces"><i class="fa fa-github"></i></a>
+            <a href="https://www.facebook.com/groups/primefaces"><i class="fa fa-facebook"></i></a>
+            <a href="http://twitter.com/primefaces"><i class="fa fa-twitter"></i></a>
+        </div>
+    </div>
+                
+                <div class="layout-main-mask"></div>
+            </div>
+
+    <div class="layout-rightpanel">
+        <div class="nano">
+            <div class="nano-content right-panel-scroll-content">
+                <div class="layout-rightpanel-header">
+                    <div class="weather-day">Wednesday</div>
+                    <div class="weather-date">Jan 26</div>
+                </div>
+
+                <div class="layout-rightpanel-content">
+                    <h1>Weather</h1>
+                    <h2>New York, USA</h2>
+
+                    <div class="weather-today">
+                        <span class="weather-today-value">21℃</span><img id="j_idt35" src="javax.faces.resource/images/dashboard/weather-icon-2.svg702f.svg?ln=manhattan-layout" alt="" width="60" />
+                    </div>
+
+                    <ul class="weekly-weather">
+                        <li>
+                            Thursday
+                            <img id="j_idt37" src="javax.faces.resource/images/dashboard/weather-icon-1.svg702f.svg?ln=manhattan-layout" alt="" />
+                            <span class="weekly-weather-value">24</span>
+                        </li>
+                        <li>
+                            Friday
+                            <img id="j_idt39" src="javax.faces.resource/images/dashboard/weather-icon-3.svg702f.svg?ln=manhattan-layout" alt="" />
+                            <span class="weekly-weather-value">19</span>
+                        </li>
+                        <li>
+                            Saturday
+                            <img id="j_idt41" src="javax.faces.resource/images/dashboard/weather-icon-4.svg702f.svg?ln=manhattan-layout" alt="" />
+                            <span class="weekly-weather-value">15</span>
+                        </li>
+                        <li>
+                            Sunday
+                            <img id="j_idt43" src="javax.faces.resource/images/dashboard/weather-icon-1.svg702f.svg?ln=manhattan-layout" alt="" />
+                            <span class="weekly-weather-value">24</span>
+                        </li>
+                        <li>
+                            Monday
+                            <img id="j_idt45" src="javax.faces.resource/images/dashboard/weather-icon-2.svg702f.svg?ln=manhattan-layout" alt="" />
+                            <span class="weekly-weather-value">21</span>
+                        </li>
+                        <li>
+                            Tuesday
+                            <img id="j_idt47" src="javax.faces.resource/images/dashboard/weather-icon-3.svg702f.svg?ln=manhattan-layout" alt="" />
+                            <span class="weekly-weather-value">20</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layout-sidebar">
+        <div class="layout-sidebar-logo">
+            <a href="dashboard.html"><img id="j_idt50" src="javax.faces.resource/images/logo-manhattan.png702f.png?ln=manhattan-layout" alt="" />
+            </a>
+            <a href="#" id="layout-sidebar-anchor" class="layout-sidebar-anchor" title="Toggle Menu">
+                <i class="fa"></i>
+            </a>
+        </div>
+
+        <div class="nano">
+            <div class="nano-content sidebar-scroll-content">
+                <div class="layout-menu-container">
+<form id="menuform" name="menuform" method="post" action="https://www.primefaces.org/manhattan/docs.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="menuform" value="menuform" />
+<ul id="menuform:j_idt52" class="layout-menu"><li id="menuform:pm_dashboard" role="menuitem"><a href="dashboard.html"><i class="fa fa-home fa-fw"></i><span>Dashboard</span></a></li><li id="menuform:pm_menu_colors" role="menuitem"><a href="#"><i class="fa fa-paint-brush fa-fw"></i><span>Menu Colors</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i></a><ul role="menu"><li id="menuform:pm_menu_dark" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_menu_dark':'menuform:pm_menu_dark'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-square fa-fw"></i><span>Dark Menu</span></a></li><li id="menuform:pm_menu_light" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_menu_light':'menuform:pm_menu_light'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-square-o fa-fw"></i><span>Light Menu</span></a></li></ul></li><li id="menuform:pm_layout_modes" role="menuitem"><a href="#"><i class="fa fa-gear fa-fw"></i><span>Layout Modes</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i><span class="menuitem-badge">5</span></a><ul role="menu"><li id="menuform:pm_layout_slim" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_slim':'menuform:pm_layout_slim'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-window-restore fa-fw"></i><span>Slim</span></a></li><li id="menuform:pm_layout_static" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_static':'menuform:pm_layout_static'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-bars fa-fw"></i><span>Static</span></a></li><li id="menuform:pm_layout_overlay" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_overlay':'menuform:pm_layout_overlay'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-arrows-h fa-fw"></i><span>Overlay</span></a></li><li id="menuform:pm_layout_horizontal" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_horizontal':'menuform:pm_layout_horizontal'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-arrows-v fa-fw"></i><span>Horizontal</span></a></li><li id="menuform:pm_layout_toggle" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_toggle':'menuform:pm_layout_toggle'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-chevron-left fa-fw"></i><span>Toggle</span></a></li></ul></li><li id="menuform:pm_themes_colors" role="menuitem"><a href="#"><i class="fa fa-paint-brush fa-fw"></i><span>Themes</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i><span class="menuitem-badge">16</span></a><ul role="menu"><li id="menuform:pm_layout_teal_yellow" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_teal_yellow':'menuform:pm_layout_teal_yellow'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Teal - Yellow</span></a></li><li id="menuform:pm_layout_blue_orange" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_blue_orange':'menuform:pm_layout_blue_orange'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Blue - Orange</span></a></li><li id="menuform:pm_layout_pink_teal" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_pink_teal':'menuform:pm_layout_pink_teal'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Pink - Teal</span></a></li><li id="menuform:pm_layout_indigo_purple" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_indigo_purple':'menuform:pm_layout_indigo_purple'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Indigo - Purple</span></a></li><li id="menuform:pm_layout_green_pink" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_green_pink':'menuform:pm_layout_green_pink'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Green - Pink</span></a></li><li id="menuform:pm_layout_indigo_yellow" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_indigo_yellow':'menuform:pm_layout_indigo_yellow'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Indigo - Yellow</span></a></li><li id="menuform:pm_layout_cyan_deeporange" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_cyan_deeporange':'menuform:pm_layout_cyan_deeporange'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Cyan - Deep Orange</span></a></li><li id="menuform:pm_layout_green_orange" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_green_orange':'menuform:pm_layout_green_orange'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Green - Orange</span></a></li><li id="menuform:pm_layout_orange_cyan" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_orange_cyan':'menuform:pm_layout_orange_cyan'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Orange - Cyan</span></a></li><li id="menuform:pm_layout_blue_grey" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_blue_grey':'menuform:pm_layout_blue_grey'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Blue - Grey</span></a></li><li id="menuform:pm_layout_deeppurple_teal" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_deeppurple_teal':'menuform:pm_layout_deeppurple_teal'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Deep Purple - Teal</span></a></li><li id="menuform:pm_layout_pink_cyan" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_pink_cyan':'menuform:pm_layout_pink_cyan'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Pink - Cyan</span></a></li><li id="menuform:pm_layout_orange_indigo" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_orange_indigo':'menuform:pm_layout_orange_indigo'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Orange - Indigo</span></a></li><li id="menuform:pm_layout_darkpink_cyan" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_darkpink_cyan':'menuform:pm_layout_darkpink_cyan'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Dark Pink - Cyan</span></a></li><li id="menuform:pm_layout_green_purple" role="menuitem"><a href="#" onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:pm_layout_green_purple':'menuform:pm_layout_green_purple'}).submit('menuform');return false;PrimeFaces.onPost();"><i class="fa fa-diamond fa-fw"></i><span>Green - Purple</span></a></li></ul></li><li id="menuform:pm_components" role="menuitem" class="orange-badge"><a href="#"><i class="fa fa-sitemap fa-fw"></i><span>Components</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i></a><ul role="menu"><li id="menuform:pm_sample" role="menuitem"><a href="sample.html"><i class="fa fa-columns fa-fw"></i><span>Sample Page</span></a></li><li id="menuform:pm_forms" role="menuitem"><a href="forms.html"><i class="fa fa-code fa-fw"></i><span>Forms</span></a></li><li id="menuform:pm_data" role="menuitem"><a href="data.html"><i class="fa fa-table fa-fw"></i><span>Data</span></a></li><li id="menuform:pm_panels" role="menuitem"><a href="panel.html"><i class="fa fa-list-alt fa-fw"></i><span>Panels</span></a></li><li id="menuform:pm_overlays" role="menuitem"><a href="overlay.html"><i class="fa fa-square fa-fw"></i><span>Overlays</span></a></li><li id="menuform:pm_menus" role="menuitem"><a href="menu.html"><i class="fa fa-minus-square-o fa-fw"></i><span>Menus</span></a></li><li id="menuform:pm_messages" role="menuitem"><a href="messages.html"><i class="fa fa-circle-o-notch fa-fw"></i><span>Messages</span></a></li><li id="menuform:pm_charts" role="menuitem"><a href="charts.html"><i class="fa fa-area-chart fa-fw"></i><span>Charts</span></a></li><li id="menuform:pm_file" role="menuitem"><a href="file.html"><i class="fa fa-arrow-circle-o-up fa-fw"></i><span>File</span></a></li><li id="menuform:pm_misc" role="menuitem"><a href="misc.html"><i class="fa fa-user-secret fa-fw"></i><span>Misc</span></a></li></ul></li><li id="menuform:pm_default" role="menuitem"><a href="#"><i class="fa fa-life-saver fa-fw"></i><span>Pages</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i></a><ul role="menu"><li id="menuform:pm_empty" role="menuitem"><a href="empty.html"><i class="fa fa-square-o fa-fw"></i><span>Empty Page</span></a></li><li id="menuform:pm_landing" role="menuitem"><a href="landing.html" target="_blank"><i class="fa fa-globe fa-fw"></i><span>Landing Page</span></a></li><li id="menuform:pm_login" role="menuitem"><a href="login.html" target="_blank"><i class="fa fa-sign-in fa-fw"></i><span>Login Page</span></a></li><li id="menuform:pm_error" role="menuitem"><a href="error.html" target="_blank"><i class="fa fa-exclamation-circle fa-fw"></i><span>Error Page</span></a></li><li id="menuform:pm_404" role="menuitem"><a href="404.html" target="_blank"><i class="fa fa-times fa-fw"></i><span>404 Page</span></a></li><li id="menuform:pm_access" role="menuitem"><a href="access.html" target="_blank"><i class="fa fa-exclamation-triangle fa-fw"></i><span>Access Denied Page</span></a></li></ul></li><li id="menuform:pm_hierarchy" role="menuitem"><a href="#"><i class="fa fa-tree fa-fw"></i><span>Menu Hierarchy</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i></a><ul role="menu"><li id="menuform:pm_sm1" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Submenu 1</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i></a><ul role="menu"><li id="menuform:pm_sm11" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Submenu 1.1</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i></a><ul role="menu"><li id="menuform:pm_lnk111" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Link 1.1.1</span></a></li><li id="menuform:pm_lnk112" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Link 1.1.2</span></a></li><li id="menuform:pm_lnk113" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Link 1.1.3</span></a></li></ul></li><li id="menuform:pm_sm12" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Submenu 1.2</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i></a><ul role="menu"><li id="menuform:pm_lnk121" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Link 1.2.1</span></a></li></ul></li></ul></li><li id="menuform:pm_sm2" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Submenu 2</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i></a><ul role="menu"><li id="menuform:pm_sm21" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Submenu 2.1</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i></a><ul role="menu"><li id="menuform:pm_lnk211" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Link 2.1.1</span></a></li><li id="menuform:pm_lnk212" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Link 2.1.2</span></a></li></ul></li><li id="menuform:pm_sm22" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Submenu 2.2</span><i class="fa fa-fw layout-submenu-toggler fa-angle-down"></i></a><ul role="menu"><li id="menuform:pm_lnk221" role="menuitem"><a href="#"><i class="fa fa-sign-in fa-fw"></i><span>Link 2.2.1</span></a></li></ul></li></ul></li></ul></li><li id="menuform:pm_doc" role="menuitem"><a href="docs.html"><i class="fa fa-book fa-fw"></i><span>Docs</span></a></li><li id="menuform:pm_buynow" role="menuitem"><a href="https://www.primefaces.org/store"><i class="fa fa-credit-card-alt fa-fw"></i><span>Buy Now</span></a></li></ul><script id="menuform:j_idt52_s" type="text/javascript">PrimeFaces.cw("Manhattan","widget_menuform_j_idt52",{id:"menuform:j_idt52"});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-536957909396656041:6044112426273008868" autocomplete="off" />
+</form>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div><div id="j_idt55" style="width:32px;height:32px;position:fixed;right:7px;bottom:7px"><div id="j_idt55_start" style="display:none">
+               <i class="fa fa-circle-o-notch fa-spin ajax-loader" aria-hidden="true"></i></div><div id="j_idt55_complete" style="display:none"></div></div><script id="j_idt55_s" type="text/javascript">$(function(){PrimeFaces.cw("AjaxStatus","widget_j_idt55",{id:"j_idt55"});});</script></body>
+
+
+<!-- Mirrored from www.primefaces.org/manhattan/docs.xhtml;jsessionid=node0ceijiubdr7ju1gbsegtadt2nc128614.node0 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Apr 2019 16:23:20 GMT -->
+</html>

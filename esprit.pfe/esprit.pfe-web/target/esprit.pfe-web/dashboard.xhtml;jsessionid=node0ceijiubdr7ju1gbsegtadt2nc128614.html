@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!-- Mirrored from www.primefaces.org/manhattan/dashboard.xhtml;jsessionid=node0ceijiubdr7ju1gbsegtadt2nc128614.node0 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Apr 2019 16:22:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="j_idt2">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+            <meta name="apple-mobile-web-app-capable" content="yes" /><link type="text/css" rel="stylesheet" href="javax.faces.resource/theme.css5bc9.css?ln=primefaces-manhattan-teal-yellow" /><link type="text/css" rel="stylesheet" href="javax.faces.resource/fa/font-awesome.css408e.css?ln=primefaces&amp;v=6.2" /><link type="text/css" rel="stylesheet" href="javax.faces.resource/components.css408e.css?ln=primefaces&amp;v=6.2" /><script type="text/javascript" src="javax.faces.resource/jquery/jquery.js408e.xhtml?ln=primefaces&amp;v=6.2"></script><script type="text/javascript" src="javax.faces.resource/jquery/jquery-plugins.js408e.xhtml?ln=primefaces&amp;v=6.2"></script><script type="text/javascript" src="javax.faces.resource/core.js408e.xhtml?ln=primefaces&amp;v=6.2"></script><script type="text/javascript" src="javax.faces.resource/components.js408e.xhtml?ln=primefaces&amp;v=6.2"></script><link type="text/css" rel="stylesheet" href="javax.faces.resource/charts/charts.css408e.css?ln=primefaces&amp;v=6.2" /><script type="text/javascript" src="javax.faces.resource/charts/charts.js408e.xhtml?ln=primefaces&amp;v=6.2"></script><link type="text/css" rel="stylesheet" href="javax.faces.resource/schedule/schedule.css408e.css?ln=primefaces&amp;v=6.2" /><script type="text/javascript" src="javax.faces.resource/moment/moment.js408e.xhtml?ln=primefaces&amp;v=6.2"></script><script type="text/javascript" src="javax.faces.resource/schedule/schedule.js408e.xhtml?ln=primefaces&amp;v=6.2"></script><link type="text/css" rel="stylesheet" href="javax.faces.resource/css/nanoscroller.css702f.css?ln=manhattan-layout" /><link type="text/css" rel="stylesheet" href="javax.faces.resource/css/layout-teal-yellow.css702f.css?ln=manhattan-layout" /><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';PrimeFaces.settings.projectStage='Development';}</script>
+        <title>Dashboard</title><script type="text/javascript" src="javax.faces.resource/js/nanoscroller.js702f.xhtml?ln=manhattan-layout"></script><script type="text/javascript" src="javax.faces.resource/js/layout.js702f.xhtml?ln=manhattan-layout"></script>
+           <script type="text/javascript">
+               //<![CDATA[
+               function skinBar() {
+                   this.cfg.shadow = false;
+                   this.cfg.title = '';
+                   this.cfg.seriesColors = ['#3984b8','#7e8dcd'];
+                   this.cfg.grid = {
+                       background: '#ffffff',
+                       borderColor: '#ffffff',
+                       gridLineColor: '#dee4e9',
+                       shadow: false
+                   };
+                   this.cfg.axesDefaults = {
+                       borderWidth: 0.1,
+                       borderColor: 'dce2e7',
+                       rendererOptions: {
+                           textColor: '#757575'
+                       }
+                   };
+                   this.cfg.seriesDefaults = {
+                       shadow: false,
+                       lineWidth: 1,
+                       renderer: $.jqplot.BarRenderer,
+                       markerOptions: {
+                           shadow: false,
+                           size: 7,
+                           style: 'circle'
+                       }
+                   }
+               }
+               //]]>
+           </script>
+           <style type="text/css">
+               .main-content {
+                   padding: 0;
+               }
+           </style></head><body>
+        <div class="layout-wrapper layout-slim layout-light">
+            <div class="layout-main">
+
+    <div class="layout-topbar">
+        <a href="#" id="layout-menu-btn" class="menu-btn">
+            <i class="fa fa-bars"></i>
+        </a>
+        
+        <div class="topbar-search">
+            <input type="text" class="ui-widget" />
+            <i class="fa fa-search"></i>
+        </div>
+        
+        <div class="layout-topbar-menu-wrapper">            
+            <ul class="topbar-menu">
+                <li class="profile-item">
+                    <a href="#"><img id="j_idt13" src="javax.faces.resource/images/avatar.png702f.png?ln=manhattan-layout" alt="" />
+                        <span class="topbar-item-name profile-name">Madison Hughes</span>
+                    </a>
+                    
+                    <ul class="animated">
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-user"></i>
+                                <span>Profile</span>
+                                <span class="topbar-badge">5</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-user-secret"></i>
+                                <span>Privacy</span>
+                                <span class="topbar-badge">2</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-cog"></i>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-sign-out"></i>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon swing fa fa-fw fa-envelope-o"></i>
+                        <span class="topbar-badge rubberBand">5</span>
+                        <span class="topbar-item-name">Messages</span>
+                    </a>
+                    <ul class="animated">
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt15" src="javax.faces.resource/images/avatar1.png702f.png?ln=manhattan-layout" alt="" width="35" />
+                                <span>Give me a call</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt17" src="javax.faces.resource/images/avatar2.png702f.png?ln=manhattan-layout" alt="" width="35" />
+                                <span>Reports attached</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt19" src="javax.faces.resource/images/avatar3.png702f.png?ln=manhattan-layout" alt="" width="35" />
+                                <span>About your invoice</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt21" src="javax.faces.resource/images/avatar2.png702f.png?ln=manhattan-layout" alt="" width="35" />
+                                <span>Meeting today</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" class="topbar-message"><img id="j_idt23" src="javax.faces.resource/images/avatar4.png702f.png?ln=manhattan-layout" alt="" width="35" />
+                                <span>Out of office</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="topbar-icon fa fa-fw fa-globe"></i>
+                        <span class="topbar-badge rubberBand">2</span>
+                        <span class="topbar-item-name">Notifications</span>
+                    </a>
+                    <ul class="animated">
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-tasks"></i>
+                                <span>Pending tasks</span>
+                                <span class="topbar-badge">6</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-calendar-check-o"></i>
+                                <span>Meeting today</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-download"></i>
+                                <span>Download</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#">
+                                <i class="fa fa-fw fa-plane"></i>
+                                <span>Book flight</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <a href="#" class="topbar-menu-btn"><img id="j_idt25" src="javax.faces.resource/images/avatar.png702f.png?ln=manhattan-layout" alt="" />
+            </a>
+            
+            <a href="#" class="rightpanel-btn">
+                <i class="topbar-icon fa fa-fw fa-outdent"></i>
+            </a>
+        </div>
+    </div>
+                
+                <div class="layout-content">
+      </div>
+    
+                
+                <div class="layout-main-mask"></div>
+            </div>
+
+    <div class="layout-rightpanel">
+        <div class="nano">
+            <div class="nano-content right-panel-scroll-content">
+                <div class="layout-rightpanel-header">
+                    <div class="weather-day">Wednesday</div>
+                    <div class="weather-date">Jan 26</div>
+                </div>
+
+                <div class="layout-rightpanel-content">
+                    <h1>Weather</h1>
+                    <h2>New York, USA</h2>
+
+                    <div class="weather-today">
+                        <span class="weather-today-value">21℃</span><img id="j_idt154" src="javax.faces.resource/images/dashboard/weather-icon-2.svg702f.svg?ln=manhattan-layout" alt="" width="60" />
+                    </div>
+
+                    <ul class="weekly-weather">
+                        <li>
+                            Thursday
+                            <img id="j_idt156" src="javax.faces.resource/images/dashboard/weather-icon-1.svg702f.svg?ln=manhattan-layout" alt="" />
+                            <span class="weekly-weather-value">24</span>
+                        </li>
+                        <li>
+                            Friday
+                            <img id="j_idt158" src="javax.faces.resource/images/dashboard/weather-icon-3.svg702f.svg?ln=manhattan-layout" alt="" />
+                            <span class="weekly-weather-value">19</span>
+                        </li>
+                        <li>
+                            Saturday
+                            <img id="j_idt160" src="javax.faces.resource/images/dashboard/weather-icon-4.svg702f.svg?ln=manhattan-layout" alt="" />
+                            <span class="weekly-weather-value">15</span>
+                        </li>
+                        <li>
+                            Sunday
+                            <img id="j_idt162" src="javax.faces.resource/images/dashboard/weather-icon-1.svg702f.svg?ln=manhattan-layout" alt="" />
+                            <span class="weekly-weather-value">24</span>
+                        </li>
+                        <li>
+                            Monday
+                            <img id="j_idt164" src="javax.faces.resource/images/dashboard/weather-icon-2.svg702f.svg?ln=manhattan-layout" alt="" />
+                            <span class="weekly-weather-value">21</span>
+                        </li>
+                        <li>
+                            Tuesday
+                            <img id="j_idt166" src="javax.faces.resource/images/dashboard/weather-icon-3.svg702f.svg?ln=manhattan-layout" alt="" />
+                            <span class="weekly-weather-value">20</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        </div><div id="j_idt174" style="width:32px;height:32px;position:fixed;right:7px;bottom:7px"><div id="j_idt174_start" style="display:none">
+               <i class="fa fa-circle-o-notch fa-spin ajax-loader" aria-hidden="true"></i></div><div id="j_idt174_complete" style="display:none"></div></div><script id="j_idt174_s" type="text/javascript">$(function(){PrimeFaces.cw("AjaxStatus","widget_j_idt174",{id:"j_idt174"});});</script></body>
+
+
+<!-- Mirrored from www.primefaces.org/manhattan/dashboard.xhtml;jsessionid=node0ceijiubdr7ju1gbsegtadt2nc128614.node0 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Apr 2019 16:23:07 GMT -->
+</html>
